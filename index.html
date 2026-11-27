@@ -289,6 +289,22 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 .crowd p{grid-column:1/-1;font:600 22px Sora,sans-serif;color:var(--ink-2)}
 @media (max-width:900px){.crowd{grid-template-columns:1fr 1fr}.crowd figure:first-child{grid-column:1/-1}}
 
+
+.launch{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;margin-top:20px}
+.launch figure{border-radius:24px;overflow:hidden;position:relative}
+.launch .big{grid-row:span 2}
+.launch img{width:100%;height:100%;object-fit:cover;aspect-ratio:1}
+.launch .big img{aspect-ratio:auto}
+.launch figcaption{position:absolute;left:0;right:0;bottom:0;padding:16px 18px;color:#fff;font-size:15px;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,.7))}
+.founders{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.founders figure{border-radius:28px;overflow:hidden;position:relative;background:var(--violet-wash);transition:transform .3s ease}
+.founders figure:hover{transform:translateY(-6px) rotate(-1deg)}
+.founders img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.founders figcaption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(32,32,45,.88);backdrop-filter:blur(8px);color:#fff;border-radius:18px;padding:14px 18px}
+.founders b{display:block;font:600 22px Sora,sans-serif}
+.founders span{font-size:15px;color:#d0cbe0}
+@media (max-width:900px){.launch{grid-template-columns:1fr 1fr}.launch .big{grid-column:1/-1;grid-row:auto}.launch .big img{aspect-ratio:4/3}.founders{grid-template-columns:1fr 1fr}.founders figure:first-child{grid-column:1/-1}.founders figure:first-child img{aspect-ratio:4/3}}
+
 /* responsive */
 @media (max-width:900px){
   body{font-size:18px}
@@ -391,20 +407,37 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 
 <div class="marquee" aria-hidden="true"><div class="track"><span>Cafés</span><span>Restaurantes</span><span>Estéticas</span><span>Tiendas</span><span>Florerías</span><span>Eventos</span><span>Barberías</span><span>Cadenas</span><span>Cafés</span><span>Restaurantes</span><span>Estéticas</span><span>Tiendas</span><span>Florerías</span><span>Eventos</span><span>Barberías</span><span>Cadenas</span></div></div>
 
+<!-- FUNDADORES -->
+<section id="fundadores">
+  <div class="wrap">
+    <div class="eyebrow" data-r>Quién hace Luuply</div>
+    <h2 data-r>Primero fuimos amigos. Luego hicimos Luuply.</h2>
+    <p class="lead" data-r>Luis y Jose se conocen desde la prepa, hace casi 15 años. Richi llegó en la universidad. Ya eran equipo mucho antes de Luuply.</p>
+    <div class="founders">
+      <figure data-r="2"><img src="assets/team/ceo.webp" alt="Luis Mendez"><figcaption><b>Luis Mendez</b><span>Cofundador y CEO</span></figcaption></figure>
+      <figure data-r="3"><img src="assets/team/cto.webp" alt="Jose Gonzalez"><figcaption><b>Jose Gonzalez</b><span>Cofundador y CTO</span></figcaption></figure>
+      <figure data-r="4"><img src="assets/team/engineer.webp" alt="Ricardo Chi"><figcaption><b>Ricardo Chi</b><span>Ingeniero fundador</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- TRACCIÓN -->
-<section id="traccion">
+<section id="traccion" style="padding-top:40px">
   <div class="wrap">
     <div class="eyebrow" data-r>Lo que ya logramos</div>
     <h2 data-r>Luuply ya está funcionando.</h2>
     <div class="stats">
       <div class="stat s-v" data-r="2"><div class="n" data-count="10">10</div><p>negocios ya usan Luuply. Entre ellos, Nimus.</p></div>
       <div class="stat s-a" data-r="3"><div class="n">3er lugar</div><p>Reconocimiento para Luuply. <a href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación →</a></p></div>
-      <div class="stat s-c" data-r="4"><div class="n">Agotado</div><p>ēmprende IA en Mérida: se vendieron todos los boletos.</p></div>
+      <div class="stat s-c" data-r="4"><div class="n">6 de nov</div><p>Lanzamos Luuply en ēmprende IA Mérida, con boletos agotados.</p></div>
       <div class="stat s-m" data-r="5"><div class="n">Marblism</div><p>Luuply ya aparece como socio en el sitio de Marblism. <a href="https://www.marblism.com/es/agencies" target="_blank" rel="noopener">Verlo →</a></p></div>
     </div>
-    <div class="photo">
-      <figure data-r="2"><img src="assets/140.webp" alt="Frank Moreno en el escenario de ēmprende IA en Mérida"><figcaption>ēmprende IA, Mérida, noviembre 2026. Lleno total.</figcaption></figure>
-      <figure data-r="3"><img src="assets/ppl/evento-publico.webp" alt="Público en un evento de Marblism"><figcaption>Eventos de Marblism: emprendedores de verdad.</figcaption></figure>
+    <div class="launch">
+      <figure class="big" data-r="2"><img src="assets/team/event/team.webp" alt="El equipo de Luuply en su stand de ēmprende IA"><figcaption>El equipo de Luuply el día del lanzamiento, ēmprende IA Mérida.</figcaption></figure>
+      <figure data-r="3"><img src="assets/team/event/visitors.webp" alt="Visitantes en el stand de Luuply"><figcaption>Visitantes en el stand.</figcaption></figure>
+      <figure data-r="4"><img src="assets/team/event/talk.webp" alt="Platicando con dueños de negocio"><figcaption>Platicando con dueños de negocio.</figcaption></figure>
+      <figure data-r="3"><img src="assets/team/event/laptop.webp" alt="Demostración de Luuply en vivo"><figcaption>Demostraciones en vivo.</figcaption></figure>
+      <figure data-r="4"><img src="assets/140.webp" alt="Escenario principal de ēmprende IA Mérida"><figcaption>Lleno total en el escenario.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -413,8 +446,8 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section id="equipo" style="padding-top:40px">
   <div class="wrap team">
     <div>
-      <div class="eyebrow" data-r>Qué cambió</div>
-      <h2 data-r>Sumamos a Jesús Pedroza Malo como socio.</h2>
+      <div class="eyebrow" data-r>Y ahora se suma</div>
+      <h2 data-r>Jesús Pedroza Malo entra como socio.</h2>
       <p class="lead" data-r>Ya recorrió este camino. Estuvo en la aceleradora más importante del mundo y su empresa anterior generó 10 millones de dólares. Ahora pone su experiencia y sus contactos al servicio de Luuply.</p>
       <div class="hands" data-r="2"><img src="assets/lp/handshake.webp" alt="" aria-hidden="true"></div>
     </div>

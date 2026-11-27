@@ -82,6 +82,13 @@ section{padding:120px 0;position:relative}
 .three b{display:block;margin-top:16px;font-size:21px}
 .three p{color:var(--ink-2);font-size:18px;margin-top:4px}
 
+.rows{display:grid;gap:14px;margin-top:40px}
+.row{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:28px 34px;box-shadow:0 20px 50px -30px rgba(27,18,96,.25)}
+.row b{font:600 26px Sora,sans-serif;display:block}
+.row p{color:var(--ink-2);font-size:18px;margin-top:4px;max-width:480px}
+.row .n{font-family:Sora,sans-serif;font-weight:700;font-size:clamp(40px,5.6vw,72px);letter-spacing:-.04em;line-height:1;text-align:right}
+.row .n.v{color:var(--violet)}
+
 /* idea */
 .idea-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
 .steps{list-style:none;display:grid;gap:14px;margin-top:34px;counter-reset:s}
@@ -226,6 +233,8 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   body{font-size:18px}
   section{padding:84px 0}
   .nav .for{display:none}
+  .row{grid-template-columns:1fr;gap:10px;padding:24px}
+  .row .n{text-align:left}
   .three,.uses,.gets,.idea-grid,.team,.photo,.calc .out{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr 1fr}
   .logos{grid-template-columns:repeat(2,1fr)}
@@ -260,8 +269,8 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   </div>
   <span class="for">Propuesta para Ali Charruf Álvarez</span>
   <div class="acts">
-    <a class="btn ghost" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver el deck</a>
-    <a class="btn primary" href="#trato">El trato</a>
+    <a class="btn ghost" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación</a>
+    <a class="btn primary" href="#trato">La propuesta</a>
   </div>
 </nav>
 
@@ -273,11 +282,11 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   </video>
   <div class="wrap">
     <span class="tag">Buscamos un inversionista ángel</span>
-    <h1>Ali, las grandes conexiones empiezan con un hola.</h1>
-    <p>Queremos que seas el primero en creer en Luuply.</p>
+    <h1>Ali, lo grande empieza con un hola.</h1>
+    <p>Queremos que seas el primero en invertir en Luuply.</p>
     <div class="ctas">
-      <a class="btn primary" href="#trato">Ver el trato <span class="arr">→</span></a>
-      <a class="btn ghost" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver el deck completo</a>
+      <a class="btn primary" href="#trato">Ver la propuesta <span class="arr">→</span></a>
+      <a class="btn ghost" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación</a>
     </div>
   </div>
   <div class="cue">↓ Sigue bajando</div>
@@ -287,12 +296,12 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section id="trato" class="deal">
   <div class="blob b1"></div><div class="blob b2"></div>
   <div class="wrap">
-    <div class="eyebrow" data-r>El trato, en tres números</div>
-    <h2 data-r>Simple y claro.</h2>
-    <div class="three">
-      <div data-r="2"><div class="n">US$45K</div><b>Tu inversión</b><p>Más la marca Zaaschila en nuestros eventos.</p></div>
-      <div data-r="3"><div class="n">5%</div><b>Lo que recibes</b><p>De Luuply, vía SAFE.</p></div>
-      <div data-r="4"><div class="n">US$10M</div><b>Valuación de hoy</b><p>Tu 5% vale US$500K en papel.</p></div>
+    <div class="eyebrow" data-r>La propuesta en tres números</div>
+    <h2 data-r>Así de sencillo.</h2>
+    <div class="rows">
+      <div class="row" data-r="2"><div><b>Tú inviertes</b><p>Más la presencia de Zaaschila en nuestros eventos.</p></div><div class="n">US$45 mil</div></div>
+      <div class="row" data-r="3"><div><b>Te quedas con</b><p>De Luuply, por medio de un SAFE: un contrato que se convierte en acciones.</p></div><div class="n v">5%</div></div>
+      <div class="row" data-r="4"><div><b>Luuply vale hoy</b><p>Así, tu 5% valdría hoy US$500 mil.</p></div><div class="n">US$10 millones</div></div>
     </div>
   </div>
 </section>
@@ -306,9 +315,9 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
       <p class="lead" data-r>Luuply une el mundo físico con el digital. Así se ve con una salsa Zaaschila.</p>
       <ol class="steps">
         <li data-r="2"><b>La prueba.</b><span>La salsa está en la mesa. Al cliente le encanta.</span></li>
-        <li data-r="3"><b>El escaneo.</b><span>Junto a la salsa hay un código de Luuply. Lo escanea.</span></li>
-        <li data-r="4"><b>El registro.</b><span>Queda con su nombre. Gana puntos y una promoción.</span></li>
-        <li data-r="5"><b>El regreso.</b><span>Luuply lo invita a volver. Tú ves cuántos regresaron.</span></li>
+        <li data-r="3"><b>El escaneo.</b><span>Junto a la salsa hay un código QR de Luuply. Lo escanea con su celular.</span></li>
+        <li data-r="4"><b>El registro.</b><span>Se registra con su nombre y gana puntos y una promoción.</span></li>
+        <li data-r="5"><b>El regreso.</b><span>Luuply lo invita a volver. Y tú ves cuántos regresaron.</span></li>
       </ol>
     </div>
     <div class="tiles" data-r="2" aria-hidden="true">
@@ -339,13 +348,13 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
     <div>
       <div class="eyebrow" data-r>Qué cambió</div>
       <h2 data-r>Sumamos a Jesús Pedroza Malo como socio.</h2>
-      <p class="lead" data-r>Ya hizo este camino. Entró a la aceleradora más importante del mundo. Su startup anterior generó ocho cifras. Ahora pone su método y su red detrás de Luuply.</p>
+      <p class="lead" data-r>Ya recorrió este camino. Estuvo en la aceleradora más importante del mundo y su empresa anterior generó 10 millones de dólares. Ahora pone su experiencia y sus contactos al servicio de Luuply.</p>
       <div class="hands" data-r="2"><img src="assets/lp/handshake.webp" alt="" aria-hidden="true"></div>
     </div>
     <div class="creds">
-      <div class="cred" data-r="2"><div class="ic"><img src="assets/yc.svg" alt="Y Combinator"></div><div><b>Y Combinator</b><span>La aceleradora detrás de Airbnb, Stripe y Dropbox.</span></div></div>
-      <div class="cred" data-r="3"><div class="ic">10M</div><div><b>US$10 millones generados</b><span>Por su startup anterior. Sabe levantar capital y crecer.</span></div></div>
-      <div class="cred" data-r="4"><div class="ic">M</div><div><b>Marblism, empleados de IA</b><span>Cofundador y CMO. Marblism entra como aliado de Luuply.</span></div></div>
+      <div class="cred" data-r="2"><div class="ic"><img src="assets/yc.svg" alt="Y Combinator"></div><div><b>Y Combinator</b><span>La aceleradora de Silicon Valley de donde salieron Airbnb y Dropbox.</span></div></div>
+      <div class="cred" data-r="3"><div class="ic">10M</div><div><b>US$10 millones generados</b><span>Por su empresa anterior. Sabe conseguir inversión y hacer crecer un negocio.</span></div></div>
+      <div class="cred" data-r="4"><div class="ic">M</div><div><b>Marblism, empleados de IA</b><span>Cofundador y director de marketing. Marblism es aliado de Luuply.</span></div></div>
     </div>
   </div>
 </section>
@@ -353,17 +362,17 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <!-- TRACCIÓN -->
 <section id="traccion" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow" data-r>Tracción</div>
-    <h2 data-r>Ya está caminando.</h2>
+    <div class="eyebrow" data-r>Lo que ya logramos</div>
+    <h2 data-r>Luuply ya está funcionando.</h2>
     <div class="stats">
-      <div class="stat s-v" data-r="2"><div class="n">10</div><p>clientes usando Luuply hoy. Entre ellos, Nimus.</p></div>
-      <div class="stat s-a" data-r="3"><div class="n">3er lugar</div><p>Reconocimiento para Luuply. <a href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver el deck →</a></p></div>
-      <div class="stat s-c" data-r="4"><div class="n">Sold out</div><p>ēmprende IA Mérida: boletos agotados.</p></div>
-      <div class="stat s-m" data-r="5"><div class="n">US$100M</div><p>la meta de valuación para 2029.</p></div>
+      <div class="stat s-v" data-r="2"><div class="n">10</div><p>negocios ya usan Luuply. Entre ellos, Nimus.</p></div>
+      <div class="stat s-a" data-r="3"><div class="n">3er lugar</div><p>Reconocimiento para Luuply. <a href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación →</a></p></div>
+      <div class="stat s-c" data-r="4"><div class="n">Agotado</div><p>ēmprende IA en Mérida: se vendieron todos los boletos.</p></div>
+      <div class="stat s-m" data-r="5"><div class="n">Marblism</div><p>Luuply ya aparece como socio en el sitio de Marblism. <a href="https://www.marblism.com/es/agencies" target="_blank" rel="noopener">Verlo →</a></p></div>
     </div>
     <div class="photo">
-      <figure data-r="2"><img src="assets/140.webp" alt="Frank Moreno en el escenario de ēmprende IA en Mérida"><figcaption>ēmprende IA, Mérida, noviembre 2026. Boletos agotados.</figcaption></figure>
-      <figure data-r="3"><img src="assets/lp/still-queue.webp" alt="Clientes haciendo fila en un negocio local"><figcaption>Luuply vive donde el negocio toca al cliente.</figcaption></figure>
+      <figure data-r="2"><img src="assets/140.webp" alt="Frank Moreno en el escenario de ēmprende IA en Mérida"><figcaption>ēmprende IA, Mérida, noviembre 2026. Lleno total.</figcaption></figure>
+      <figure data-r="3"><img src="assets/lp/still-queue.webp" alt="Clientes haciendo fila en un negocio local"><figcaption>Luuply está donde el negocio conoce a su cliente.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -371,19 +380,19 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <!-- ALIADOS -->
 <section id="aliados" style="padding-top:40px">
   <div class="wrap">
-    <div class="eyebrow" data-r>Todo sobre la mesa</div>
-    <h2 data-r>Aliados que conectan lo físico con lo digital.</h2>
+    <div class="eyebrow" data-r>Con quién trabajamos</div>
+    <h2 data-r>Nuestros aliados.</h2>
     <div class="logos">
-      <div class="logo" data-r="2"><div class="mk"><img src="assets/marblism.png" alt="Marblism"></div><span class="pill p-ok">Socio</span><p>Aporta licencias de IA para los emprendedores.</p></div>
-      <div class="logo" data-r="3"><div class="mk"><img src="assets/yc.svg" alt="Y Combinator" style="height:50px"></div><span class="pill p-ok">Red</span><p>Fundadores e inversionistas de Silicon Valley.</p></div>
-      <div class="logo" data-r="4"><div class="mk tec"><img src="assets/tec.svg" alt=""><span>Tecnológico<br>de Monterrey</span></div><span class="pill p-go">En proceso</span><p>Eventos de emprendimiento todo el año.</p></div>
+      <div class="logo" data-r="2"><div class="mk"><img src="assets/marblism.png" alt="Marblism"></div><span class="pill p-ok">Socio</span><p>Regala licencias de IA a los emprendedores. Luuply ya está en su sitio.</p></div>
+      <div class="logo" data-r="3"><div class="mk"><img src="assets/yc.svg" alt="Y Combinator" style="height:50px"></div><span class="pill p-ok">Contactos</span><p>Fundadores e inversionistas de Silicon Valley.</p></div>
+      <div class="logo" data-r="4"><div class="mk tec"><img src="assets/tec.svg" alt=""><span>Tecnológico<br>de Monterrey</span></div><span class="pill p-go">En pláticas</span><p>Eventos de emprendimiento todo el año.</p></div>
       <div class="logo" data-r="5"><div class="mk"><img src="assets/Logotipo-Zaaschila-Nuevo.png" alt="Zaaschila"></div><span class="pill p-you">Parte de esta propuesta</span><p>En cada evento de 2027.</p></div>
       <div class="logo" data-r="2"><div class="mk word">Nimus</div><span class="pill p-ok">Cliente</span><p>Tienda de lámparas que usa Luuply.</p></div>
       <div class="logo" data-r="3"><div class="mk"><img src="assets/logo-fin-trim.png" alt="FIN, Frank Moreno"></div><span class="pill p-ok">Aliado</span><p>Frank Moreno. Keynote en Mérida.</p></div>
       <div class="logo" data-r="4"><div class="mk"><img src="assets/logo-endor-trim.png" alt="Grupo ēndor"></div><span class="pill p-ok">Aliado</span><p>Coorganizador de ēmprende IA.</p></div>
       <div class="logo" data-r="5"><div class="mk"><img src="assets/logo-fosbory-trim.png" alt="Fosbory"></div><span class="pill p-ok">Aliado</span><p>Coorganizador de ēmprende IA.</p></div>
       <div class="logo" data-r="2"><div class="mk"><img src="assets/logo-manivela.png" alt="Manivela"></div><span class="pill p-ok">Aliado</span><p>Coorganizador de ēmprende IA.</p></div>
-      <div class="logo you" data-r="3"><div class="mk word" style="color:var(--violet)">Tú</div><span class="pill p-you">Inversionista ángel</span><p>Tu lugar en esta mesa.</p></div>
+      <div class="logo you" data-r="3"><div class="mk word" style="color:var(--violet)">Tú</div><span class="pill p-you">Inversionista ángel</span><p>Aquí va tu lugar.</p></div>
     </div>
   </div>
 </section>
@@ -392,12 +401,12 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section id="ask" class="ask">
   <div class="wrap">
     <div class="eyebrow" data-r>Lo que necesitamos</div>
-    <div class="ask-big" data-r>US$45K<small>+ la marca Zaaschila y las marcas de tu grupo</small></div>
+    <div class="ask-big" data-r>US$45 mil<small>+ la presencia de Zaaschila y las marcas de tu grupo</small></div>
     <div class="bar" aria-hidden="true"><i style="flex:5;background:var(--coral)"></i><i style="flex:40;background:var(--violet);animation-delay:.3s"></i></div>
     <div class="uses">
-      <div class="use" data-r="2"><div class="n" style="color:var(--coral)">US$5K</div><h3>Scouting y Tec</h3><p>Vuelos y hospedaje para cerrar la relación con el Tec de Monterrey.</p></div>
-      <div class="use" data-r="3"><div class="n" style="color:var(--violet)">US$40K</div><h3>San Francisco</h3><p>Del 15 de enero al 15 de marzo. Deep workshop y validación del producto en EE. UU.</p></div>
-      <div class="use" data-r="4"><div class="n">US$1M</div><h3>La meta</h3><p>Levantar 1 millón de dólares en San Francisco.</p></div>
+      <div class="use" data-r="2"><div class="n" style="color:var(--coral)">US$5 mil</div><h3>Viajes y Tec</h3><p>Vuelos y hotel para cerrar el acuerdo con el Tec de Monterrey.</p></div>
+      <div class="use" data-r="3"><div class="n" style="color:var(--violet)">US$40 mil</div><h3>San Francisco</h3><p>Del 15 de enero al 15 de marzo. Dos meses de trabajo intenso para probar Luuply con clientes en Estados Unidos.</p></div>
+      <div class="use" data-r="4"><div class="n">US$1 millón</div><h3>La meta</h3><p>Conseguir 1 millón de dólares de inversionistas en San Francisco.</p></div>
     </div>
   </div>
 </section>
@@ -406,12 +415,12 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section id="recibes">
   <div class="wrap">
     <div class="eyebrow" data-r>Qué recibes</div>
-    <h2 data-r>Tres cosas por creer primero.</h2>
+    <h2 data-r>Lo que ganas tú.</h2>
     <div class="gets">
-      <div class="get" data-r="2"><div class="k">Uno</div><h3>5% de Luuply</h3><p>Vía SAFE, el contrato estándar de Silicon Valley. Es tuyo por creer antes que nadie.</p></div>
-      <div class="get" data-r="3"><div class="k">Dos</div><h3>Tu dinero de regreso</h3><p>Si cerramos la ronda en marzo, te devolvemos tus US$45K. Y tu 5% se queda contigo.</p></div>
+      <div class="get" data-r="2"><div class="k">Uno</div><h3>5% de Luuply</h3><p>Con un SAFE, el contrato que usan en Silicon Valley para los primeros inversionistas. Es tuyo por creer antes que nadie.</p></div>
+      <div class="get" data-r="3"><div class="k">Dos</div><h3>Tu dinero de regreso</h3><p>Si en marzo conseguimos el millón de dólares, te regresamos tus US$45 mil. Y tu 5% sigue siendo tuyo.</p></div>
       <div class="get" data-r="4"><div class="k">Tres</div><h3>Zaaschila en 2027</h3><p>Tus marcas en nuestros eventos de emprendedores y empresarios todo el año.</p>
-        <div class="cities"><span>Mérida</span><span>México</span><span>Miami</span><span>Atlanta</span><span>EE. UU.</span><span>Sudamérica</span></div>
+        <div class="cities"><span>Mérida</span><span>México</span><span>Miami</span><span>Atlanta</span><span>Estados Unidos</span><span>Sudamérica</span></div>
       </div>
     </div>
   </div>
@@ -421,17 +430,17 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section id="numeros" style="padding-top:20px">
   <div class="wrap">
     <div class="eyebrow" data-r>Mueve la barra</div>
-    <h2 data-r>Cuánto vale tu 5%.</h2>
+    <h2 data-r>¿Cuánto vale tu 5%?</h2>
     <div class="calc" data-r="2">
-      <label for="val">Valuación de Luuply: <span id="valTxt">US$10M</span></label>
+      <label for="val">Si Luuply vale: <span id="valTxt">US$10 millones</span></label>
       <input type="range" id="val" min="10" max="100" step="5" value="10">
-      <div class="ticks"><span>US$10M · hoy</span><span>US$100M · meta 2029</span></div>
+      <div class="ticks"><span>Hoy: 10 millones</span><span>Meta 2029: 100 millones</span></div>
       <div class="out">
-        <div><small>Tú pones</small><div class="n">US$45K</div></div>
-        <div><small>Tu 5% vale</small><div class="n" id="worth">US$500K</div></div>
+        <div><small>Tú pones</small><div class="n">US$45 mil</div></div>
+        <div><small>Tu 5% vale</small><div class="n" id="worth">US$500 mil</div></div>
       </div>
     </div>
-    <p class="note">Valores en papel, antes de la dilución de rondas futuras. US$100M es nuestra meta para 2029, no una garantía. Los términos finales se firman en el SAFE.</p>
+    <p class="note">Son valores estimados. Si entran más inversionistas, tu porcentaje puede bajar un poco. Los 100 millones son nuestra meta para 2029, no una promesa. Las condiciones finales quedan por escrito en el contrato.</p>
   </div>
 </section>
 
@@ -441,11 +450,11 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
     <div class="eyebrow" data-r>Calendario</div>
     <h2 data-r>De aquí a 2029.</h2>
     <div class="tl">
-      <div class="tl-row" data-r="2"><div class="when">Diciembre 2026</div><div><b>Firmamos el SAFE</b><span>Scouting y cierre con el Tec de Monterrey.</span></div></div>
-      <div class="tl-row" data-r="3"><div class="when">15 ene a 15 mar</div><div><b>Luuply en San Francisco</b><span>Workshop, validación y reuniones con inversionistas.</span></div></div>
-      <div class="tl-row" data-r="4"><div class="when">Marzo 2027</div><div><b>Ronda de US$1M</b><span>Si cerramos, te devolvemos tus US$45K y conservas tu 5%.</span></div></div>
-      <div class="tl-row" data-r="5"><div class="when">Todo 2027</div><div><b>Gira de eventos con Zaaschila</b><span>Mérida, México, Miami, Atlanta, EE. UU. y Sudamérica.</span></div></div>
-      <div class="tl-row" data-r="2"><div class="when">2029</div><div><b>Meta: US$100M de valuación</b><span>Diez veces la valuación de hoy.</span></div></div>
+      <div class="tl-row" data-r="2"><div class="when">Diciembre 2026</div><div><b>Firmamos el contrato</b><span>Viajamos para cerrar el acuerdo con el Tec de Monterrey.</span></div></div>
+      <div class="tl-row" data-r="3"><div class="when">15 ene a 15 mar</div><div><b>Luuply en San Francisco</b><span>Probamos Luuply con clientes y nos reunimos con inversionistas.</span></div></div>
+      <div class="tl-row" data-r="4"><div class="when">Marzo 2027</div><div><b>Conseguimos US$1 millón</b><span>Si lo logramos, te regresamos tus US$45 mil y conservas tu 5%.</span></div></div>
+      <div class="tl-row" data-r="5"><div class="when">Todo 2027</div><div><b>Gira de eventos con Zaaschila</b><span>Mérida, México, Miami, Atlanta, Estados Unidos y Sudamérica.</span></div></div>
+      <div class="tl-row" data-r="2"><div class="when">2029</div><div><b>Meta: que Luuply valga US$100 millones</b><span>Diez veces lo que vale hoy.</span></div></div>
     </div>
   </div>
 </section>
@@ -454,9 +463,9 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section class="close">
   <div class="glow"></div>
   <div class="wrap">
-    <h2 data-r>Con US$45K financias el piloto y la ronda; a cambio te llevas <em>el 5% de Luuply</em>, tu dinero de regreso si levantamos en marzo y Zaaschila frente a emprendedores todo 2027.</h2>
+    <h2 data-r>Con US$45 mil pagas la prueba piloto y el viaje para conseguir inversión; a cambio te quedas con <em>el 5% de Luuply</em>, recuperas tu dinero si en marzo conseguimos el millón y Zaaschila sale en nuestros eventos todo 2027.</h2>
     <div class="ctas" data-r="2">
-      <a class="btn primary" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver el deck completo <span class="arr">→</span></a>
+      <a class="btn primary" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación <span class="arr">→</span></a>
     </div>
     <div class="sign" data-r="3"><img src="assets/lp/luuply-logo-on-dark.png" alt="Luuply"></div>
   </div>
@@ -467,8 +476,8 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <script>
 (function(){
   var r=document.getElementById('val'),t=document.getElementById('valTxt'),w=document.getElementById('worth');
-  function f(n){return n>=1000?'US$'+(n/1000).toFixed(n%1000?1:0)+'M':'US$'+n+'K'}
-  function u(){var v=+r.value;t.textContent='US$'+v+'M';w.textContent=f(v*50);r.style.setProperty('--p',((v-10)/90*100)+'%')}
+  function f(n){if(n<1000)return 'US$'+n+' mil';var m=n/1000;return 'US$'+(n%1000?m.toFixed(1):m)+(m===1?' millón':' millones')}
+  function u(){var v=+r.value;t.textContent='US$'+v+' millones';w.textContent=f(v*50);r.style.setProperty('--p',((v-10)/90*100)+'%')}
   r.addEventListener('input',u);u();
   var els=document.querySelectorAll('[data-r]');
   if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}

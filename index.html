@@ -161,7 +161,7 @@ section{padding:120px 0;position:relative}
 .ask-big small{display:block;font:600 22px Manrope,sans-serif;letter-spacing:0;color:var(--ink-2);margin-top:14px}
 .bar{display:flex;height:18px;border-radius:99px;overflow:hidden;margin:40px 0 20px;background:var(--violet-wash)}
 .bar i{display:block;transform-origin:left;animation:lp-bar 1.4s cubic-bezier(.2,.8,.2,1) both}
-.uses{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.uses{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .use{border-radius:var(--r);padding:30px 26px;background:var(--bg)}
 .use .n{font-family:Sora,sans-serif;font-weight:700;font-size:44px;letter-spacing:-.04em;line-height:1}
 .use h3{margin:14px 0 8px;font-size:21px}
@@ -305,6 +305,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 .founders span{font-size:15px;color:#d0cbe0}
 @media (max-width:900px){.launch{grid-template-columns:1fr 1fr}.launch .big{grid-column:1/-1;grid-row:auto}.launch .big img{aspect-ratio:4/3}.founders{grid-template-columns:1fr 1fr}.founders figure:first-child{grid-column:1/-1}.founders figure:first-child img{aspect-ratio:4/3}}
 
+@media (max-width:1100px) and (min-width:901px){.uses{grid-template-columns:1fr 1fr}}
 /* responsive */
 @media (max-width:900px){
   body{font-size:18px}
@@ -488,7 +489,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
     <div class="eyebrow" data-r>La propuesta</div>
     <h2 data-r>Así de sencillo, en tres números.</h2>
     <div class="rows">
-      <div class="row" data-r="2"><div><b>Tú inviertes</b><p>Más la presencia de Zaaschila en nuestros eventos.</p></div><div class="n" data-count="45" data-pre="US$" data-suf=" mil">US$45 mil</div></div>
+      <div class="row" data-r="2"><div><b>Tú inviertes</b><p>Más la presencia de Zaaschila en nuestros eventos.</p></div><div class="n" data-count="50" data-pre="US$" data-suf=" mil">US$50 mil</div></div>
       <div class="row" data-r="3"><div><b>Te quedas con</b><p>De Luuply, por medio de un SAFE: un contrato que se convierte en acciones.</p></div><div class="n v" data-count="2" data-suf="%">2%</div></div>
       <div class="row" data-r="4"><div><b>Luuply vale hoy</b><p>Así, tu 2% valdría hoy US$200 mil.</p></div><div class="n" data-count="10" data-pre="US$" data-suf=" millones">US$10 millones</div></div>
     </div>
@@ -498,13 +499,14 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <!-- ASK -->
 <section id="ask" class="ask">
   <div class="wrap">
-    <div class="eyebrow" data-r>A dónde van los US$45 mil</div>
-    <h2 data-r>Dos viajes y una meta.</h2>
-    <div class="bar" data-r aria-hidden="true"><i style="flex:5;background:var(--coral)"></i><i style="flex:40;background:var(--violet);animation-delay:.3s"></i></div>
+    <div class="eyebrow" data-r>A dónde van los US$50 mil</div>
+    <h2 data-r>Dos viajes, marketing y una meta.</h2>
+    <div class="bar" data-r aria-hidden="true"><i style="flex:5;background:var(--coral)"></i><i style="flex:40;background:var(--violet);animation-delay:.3s"></i><i style="flex:5;background:var(--mint)"></i></div>
     <div class="uses">
       <div class="use" data-r="2"><div class="n" style="color:var(--coral)">US$5 mil</div><h3>Monterrey, 3 al 7 de diciembre</h3><p>Vuelos y hotel para cerrar el acuerdo con el Tec de Monterrey.</p></div>
       <div class="use" data-r="3"><div class="n" style="color:var(--violet)">US$40 mil</div><h3>San Francisco</h3><p>Del 15 de enero al 15 de marzo. Dos meses de trabajo intenso para probar Luuply con clientes en Estados Unidos.</p></div>
-      <div class="use" data-r="4"><div class="n">US$1 millón</div><h3>La meta</h3><p>Conseguir 1 millón de dólares de inversionistas en San Francisco.</p></div>
+      <div class="use" data-r="4"><div class="n" style="color:#0f7a60">US$5 mil</div><h3>Marketing</h3><p>Material y activaciones de Luuply con Zaaschila en nuestros eventos.</p></div>
+      <div class="use" data-r="5"><div class="n">US$1 millón</div><h3>La meta</h3><p>Conseguir 1 millón de dólares de inversionistas en San Francisco.</p></div>
     </div>
   </div>
 </section>
@@ -522,7 +524,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
     </div>
     <div class="gets">
       <div class="get" data-r="2"><div class="k">Uno</div><h3>2% de Luuply</h3><p>Con un SAFE, el contrato que usan en Silicon Valley para los primeros inversionistas. Es tuyo por creer antes que nadie.</p></div>
-      <div class="get" data-r="3"><div class="k">Dos</div><h3>4 veces más por ser el primero</h3><p>A esta valuación, US$45 mil equivalen a 0.45% de Luuply. A ti te damos 2%.</p></div>
+      <div class="get" data-r="3"><div class="k">Dos</div><h3>4 veces más por ser el primero</h3><p>A esta valuación, US$50 mil equivalen a 0.5% de Luuply. A ti te damos 2%.</p></div>
       <div class="get" data-r="4"><div class="k">Tres</div><h3>Zaaschila en 2027</h3><p>Tus marcas en nuestros eventos de emprendedores y empresarios todo el año.</p>
         <div class="cities"><span>Mérida</span><span>México</span><span>Miami</span><span>Atlanta</span><span>Estados Unidos</span><span>Sudamérica</span></div>
       </div>
@@ -540,7 +542,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
       <input type="range" id="val" min="10" max="100" step="5" value="10">
       <div class="ticks"><span>Hoy: 10 millones</span><span>Meta 2029: 100 millones</span></div>
       <div class="out">
-        <div><small>Tú pones</small><div class="n">US$45 mil</div></div>
+        <div><small>Tú pones</small><div class="n">US$50 mil</div></div>
         <div><small>Tu 2% vale</small><div class="n" id="worth">US$200 mil</div></div>
       </div>
     </div>
@@ -568,7 +570,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 <section class="close">
   <div class="glow"></div>
   <div class="wrap">
-    <h2 data-r>Con US$45 mil pagas la prueba piloto y el viaje para conseguir inversión; a cambio te quedas con <em>el 2% de Luuply</em> y Zaaschila sale en nuestros eventos todo 2027.</h2>
+    <h2 data-r>Con US$50 mil pagas la prueba piloto, el marketing y el viaje para conseguir inversión; a cambio te quedas con <em>el 2% de Luuply</em> y Zaaschila sale en nuestros eventos todo 2027.</h2>
     <div class="ctas" data-r="2">
       <a class="btn primary" href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación <span class="arr">→</span></a>
     </div>

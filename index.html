@@ -188,7 +188,7 @@ section{padding:120px 0;position:relative}
 .calc .out>div{border-radius:24px;padding:28px;background:var(--bg)}
 .calc .out>div:last-child{background:var(--violet-wash)}
 .calc .out small{font-size:17px;color:var(--ink-2);display:block;font-weight:600}
-.calc .out .n{font-family:Sora,sans-serif;font-weight:700;font-size:clamp(48px,6vw,76px);letter-spacing:-.04em;line-height:1.05;margin-top:6px}
+.calc .out .n{white-space:nowrap;font-family:Sora,sans-serif;font-weight:700;font-size:clamp(36px,4.6vw,64px);letter-spacing:-.04em;line-height:1.05;margin-top:6px}
 .calc .out>div:last-child .n{color:var(--violet)}
 .note{font-size:15px;color:var(--mute);margin-top:18px;max-width:820px}
 
@@ -228,6 +228,67 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   .js [data-r]{opacity:1;transform:none}
 }
 
+
+/* flow */
+.progress{position:fixed;top:0;left:0;right:0;height:4px;z-index:30}
+.progress i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--violet),#b9aaf4);transform-origin:left;transform:scaleX(0)}
+.story{padding-bottom:60px}
+.story-head{max-width:760px}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:40px}
+.stage{position:sticky;top:110px;height:min(560px,calc(100vh - 150px));border-radius:36px;overflow:hidden;background:linear-gradient(160deg,#f4f2ff,#c9c2ff);box-shadow:0 40px 80px -40px rgba(27,18,96,.5)}
+.frame{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transform:scale(1.06);transition:opacity .7s ease,transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.frame.on{opacity:1;transform:none}
+.frame .cover{width:100%;height:100%;object-fit:cover}
+.salsa-set{display:flex;align-items:flex-end;justify-content:center;filter:drop-shadow(0 24px 24px rgba(27,18,96,.25))}
+.salsa-set img{height:300px;width:auto;margin:0 -30px}
+.salsa-set img:nth-child(2){height:340px;position:relative;z-index:1}
+.dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.dots i{width:10px;height:10px;border-radius:99px;background:rgba(255,255,255,.6);transition:width .4s,background .4s}
+.dots i.on{width:30px;background:#fff}
+.chapters{list-style:none}
+.ch{min-height:62vh;display:flex;flex-direction:column;justify-content:center;opacity:.28;transition:opacity .5s ease}
+.ch.on{opacity:1}
+.ch .num{width:56px;height:56px;border-radius:18px;background:var(--violet-wash);color:var(--violet);display:grid;place-items:center;font:700 24px Sora,sans-serif;margin-bottom:20px;transition:background .4s,color .4s}
+.ch.on .num{background:var(--violet);color:#fff}
+.ch b{font:600 clamp(32px,3.6vw,46px)/1.1 Sora,sans-serif;letter-spacing:-.02em}
+.ch>span:not(.num){font-size:22px;color:var(--ink-2);margin-top:12px;max-width:440px}
+.m-only{display:none}
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;padding:22px 0}
+.marquee .track{display:flex;gap:56px;width:max-content;animation:lp-marquee 32s linear infinite}
+.marquee span{font:600 clamp(26px,3vw,40px) Sora,sans-serif;letter-spacing:-.02em;color:var(--ink);display:flex;align-items:center;gap:56px;white-space:nowrap}
+.marquee span:after{content:"";width:12px;height:12px;border-radius:50%;background:var(--violet)}
+@keyframes lp-marquee{to{transform:translateX(-50%)}}
+.bar i{animation:none;transform:scaleX(0);transition:transform 1.4s cubic-bezier(.2,.8,.2,1)}
+.bar.in i,.no-io .bar i{transform:scaleX(1)}
+.bar i:nth-child(2){transition-delay:.25s}
+.js .bar[data-r]{opacity:1;transform:none}
+@media (max-width:900px){
+  .story-grid{grid-template-columns:1fr;gap:0;margin-top:20px}
+  .stage{display:none}
+  .ch{min-height:0;opacity:1;padding:26px 0;border-top:1px solid var(--line)}
+  .ch .num{background:var(--violet);color:#fff}
+  .m-only{display:block;margin-top:20px;border-radius:28px;width:100%;aspect-ratio:1;object-fit:cover}
+  .m-only.salsa-set{display:flex;aspect-ratio:auto;padding:24px 0;background:linear-gradient(160deg,#f4f2ff,#c9c2ff)}
+  .m-only.salsa-set img{height:180px;margin:0 -20px}
+  .m-only.salsa-set img:nth-child(2){height:200px}
+}
+@media (prefers-reduced-motion:reduce){.marquee .track{animation:none}.frame{transition:none}}
+
+
+.portrait{position:relative;border-radius:28px;overflow:hidden;margin-bottom:4px}
+.portrait img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 30%}
+.portrait figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72))}
+.portrait b{display:block;font:600 24px Sora,sans-serif}
+.portrait span{font-size:16px;opacity:.9}
+.office{border-radius:22px;overflow:hidden;position:relative}
+.office img{width:100%;aspect-ratio:16/8;object-fit:cover}
+.office figcaption{position:absolute;left:14px;bottom:12px;font-size:14px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);padding:4px 12px;border-radius:99px}
+.crowd{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:14px;margin-top:36px}
+.crowd figure{border-radius:24px;overflow:hidden}
+.crowd img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover}
+.crowd p{grid-column:1/-1;font:600 22px Sora,sans-serif;color:var(--ink-2)}
+@media (max-width:900px){.crowd{grid-template-columns:1fr 1fr}.crowd figure:first-child{grid-column:1/-1}}
+
 /* responsive */
 @media (max-width:900px){
   body{font-size:18px}
@@ -261,6 +322,7 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
 </head>
 <body>
 
+<div class="progress" aria-hidden="true"><i id="prog"></i></div>
 <nav class="nav" aria-label="Principal">
   <div class="brand">
     <img src="assets/lp/luuply-logo-on-dark.png" alt="Luuply">
@@ -292,47 +354,6 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   <div class="cue">↓ Sigue bajando</div>
 </header>
 
-<!-- TRATO EN TRES NÚMEROS -->
-<section id="trato" class="deal">
-  <div class="blob b1"></div><div class="blob b2"></div>
-  <div class="wrap">
-    <div class="eyebrow" data-r>La propuesta en tres números</div>
-    <h2 data-r>Así de sencillo.</h2>
-    <div class="rows">
-      <div class="row" data-r="2"><div><b>Tú inviertes</b><p>Más la presencia de Zaaschila en nuestros eventos.</p></div><div class="n">US$45 mil</div></div>
-      <div class="row" data-r="3"><div><b>Te quedas con</b><p>De Luuply, por medio de un SAFE: un contrato que se convierte en acciones.</p></div><div class="n v">2%</div></div>
-      <div class="row" data-r="4"><div><b>Luuply vale hoy</b><p>Así, tu 2% valdría hoy US$200 mil.</p></div><div class="n">US$10 millones</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- LA IDEA -->
-<section id="idea">
-  <div class="wrap idea-grid">
-    <div>
-      <div class="eyebrow" data-r>Cómo funciona</div>
-      <h2 data-r>Una salsa en la mesa. Un cliente que regresa.</h2>
-      <p class="lead" data-r>Luuply une el mundo físico con el digital. Así se ve con una salsa Zaaschila.</p>
-      <ol class="steps">
-        <li data-r="2"><b>La prueba.</b><span>La salsa está en la mesa. Al cliente le encanta.</span></li>
-        <li data-r="3"><b>El escaneo.</b><span>Junto a la salsa hay un código QR de Luuply. Lo escanea con su celular.</span></li>
-        <li data-r="4"><b>El registro.</b><span>Se registra con su nombre y gana puntos y una promoción.</span></li>
-        <li data-r="5"><b>El regreso.</b><span>Luuply lo invita a volver. Y tú ves cuántos regresaron.</span></li>
-      </ol>
-    </div>
-    <div class="tiles" data-r="2" aria-hidden="true">
-      <div class="tile t1"><img src="assets/lp/still-scan.webp" alt=""></div>
-      <div class="tile t2"><img src="assets/lp/still-tap.webp" alt=""></div>
-      <div class="tile t3"><img src="assets/lp/still-handoff.webp" alt=""></div>
-      <div class="salsas">
-        <img src="assets/Mango-habanero.png" alt="">
-        <img src="assets/BBQ-Spicy.png" alt="">
-        <img src="assets/Ranch-Jalapeno-265g-Render.png" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FRASE -->
 <section class="statement">
   <div class="glow"></div>
@@ -342,8 +363,54 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   </div>
 </section>
 
+<!-- LA IDEA -->
+<section id="idea" class="story">
+  <div class="wrap">
+    <div class="story-head">
+      <div class="eyebrow" data-r>Cómo funciona</div>
+      <h2 data-r>Una salsa en la mesa. Un cliente que regresa.</h2>
+      <p class="lead" data-r>Luuply une el mundo físico con el digital. Así se ve con una salsa Zaaschila.</p>
+    </div>
+    <div class="story-grid">
+      <div class="stage" aria-hidden="true">
+        <div class="frame on" data-k="1"><div class="salsa-set"><img src="assets/Mango-habanero.png" alt=""><img src="assets/BBQ-Spicy.png" alt=""><img src="assets/Ranch-Jalapeno-265g-Render.png" alt=""></div></div>
+        <div class="frame" data-k="2"><img class="cover" src="assets/lp/still-scan.webp" alt=""></div>
+        <div class="frame" data-k="3"><img class="cover" src="assets/lp/still-tap.webp" alt=""></div>
+        <div class="frame" data-k="4"><img class="cover" src="assets/lp/still-queue.webp" alt=""></div>
+        <div class="dots"><i class="on"></i><i></i><i></i><i></i></div>
+      </div>
+      <ol class="chapters">
+        <li class="ch on" data-k="1"><span class="num">1</span><b>La prueba.</b><span>La salsa está en la mesa. Al cliente le encanta.</span><div class="m-only salsa-set"><img src="assets/Mango-habanero.png" alt=""><img src="assets/BBQ-Spicy.png" alt=""><img src="assets/Ranch-Jalapeno-265g-Render.png" alt=""></div></li>
+        <li class="ch" data-k="2"><span class="num">2</span><b>El escaneo.</b><span>Junto a la salsa hay un código QR de Luuply. Lo escanea con su celular.</span><img class="m-only" src="assets/lp/still-scan.webp" alt="Cliente escaneando un código QR de Luuply"></li>
+        <li class="ch" data-k="3"><span class="num">3</span><b>El registro.</b><span>Se registra con su nombre y gana puntos y una promoción.</span><img class="m-only" src="assets/lp/still-tap.webp" alt="Cliente registrándose con su celular"></li>
+        <li class="ch" data-k="4"><span class="num">4</span><b>El regreso.</b><span>Luuply lo invita a volver. Y tú ves cuántos regresaron.</span><img class="m-only" src="assets/lp/still-queue.webp" alt="Clientes de regreso en un negocio"></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Cafés</span><span>Restaurantes</span><span>Estéticas</span><span>Tiendas</span><span>Florerías</span><span>Eventos</span><span>Barberías</span><span>Cadenas</span><span>Cafés</span><span>Restaurantes</span><span>Estéticas</span><span>Tiendas</span><span>Florerías</span><span>Eventos</span><span>Barberías</span><span>Cadenas</span></div></div>
+
+<!-- TRACCIÓN -->
+<section id="traccion">
+  <div class="wrap">
+    <div class="eyebrow" data-r>Lo que ya logramos</div>
+    <h2 data-r>Luuply ya está funcionando.</h2>
+    <div class="stats">
+      <div class="stat s-v" data-r="2"><div class="n" data-count="10">10</div><p>negocios ya usan Luuply. Entre ellos, Nimus.</p></div>
+      <div class="stat s-a" data-r="3"><div class="n">3er lugar</div><p>Reconocimiento para Luuply. <a href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación →</a></p></div>
+      <div class="stat s-c" data-r="4"><div class="n">Agotado</div><p>ēmprende IA en Mérida: se vendieron todos los boletos.</p></div>
+      <div class="stat s-m" data-r="5"><div class="n">Marblism</div><p>Luuply ya aparece como socio en el sitio de Marblism. <a href="https://www.marblism.com/es/agencies" target="_blank" rel="noopener">Verlo →</a></p></div>
+    </div>
+    <div class="photo">
+      <figure data-r="2"><img src="assets/140.webp" alt="Frank Moreno en el escenario de ēmprende IA en Mérida"><figcaption>ēmprende IA, Mérida, noviembre 2026. Lleno total.</figcaption></figure>
+      <figure data-r="3"><img src="assets/ppl/evento-publico.webp" alt="Público en un evento de Marblism"><figcaption>Eventos de Marblism: emprendedores de verdad.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- EQUIPO -->
-<section id="equipo">
+<section id="equipo" style="padding-top:40px">
   <div class="wrap team">
     <div>
       <div class="eyebrow" data-r>Qué cambió</div>
@@ -352,27 +419,11 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
       <div class="hands" data-r="2"><img src="assets/lp/handshake.webp" alt="" aria-hidden="true"></div>
     </div>
     <div class="creds">
+      <figure class="portrait" data-r="2"><img src="assets/ppl/jesus.jpg" alt="Jesús Pedroza Malo"><figcaption><b>Jesús Pedroza Malo</b><span>Socio de Luuply · Cofundador de Marblism</span></figcaption></figure>
       <div class="cred" data-r="2"><div class="ic"><img src="assets/yc.svg" alt="Y Combinator"></div><div><b>Y Combinator</b><span>La aceleradora de Silicon Valley de donde salieron Airbnb y Dropbox.</span></div></div>
       <div class="cred" data-r="3"><div class="ic">10M</div><div><b>US$10 millones generados</b><span>Por su empresa anterior. Sabe conseguir inversión y hacer crecer un negocio.</span></div></div>
       <div class="cred" data-r="4"><div class="ic">M</div><div><b>Marblism, empleados de IA</b><span>Cofundador y director de marketing. Marblism es aliado de Luuply.</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TRACCIÓN -->
-<section id="traccion" style="padding-top:40px">
-  <div class="wrap">
-    <div class="eyebrow" data-r>Lo que ya logramos</div>
-    <h2 data-r>Luuply ya está funcionando.</h2>
-    <div class="stats">
-      <div class="stat s-v" data-r="2"><div class="n">10</div><p>negocios ya usan Luuply. Entre ellos, Nimus.</p></div>
-      <div class="stat s-a" data-r="3"><div class="n">3er lugar</div><p>Reconocimiento para Luuply. <a href="https://www.papermark.com/view/cmwegjqam000cl8089p6l0h47" target="_blank" rel="noopener">Ver la presentación →</a></p></div>
-      <div class="stat s-c" data-r="4"><div class="n">Agotado</div><p>ēmprende IA en Mérida: se vendieron todos los boletos.</p></div>
-      <div class="stat s-m" data-r="5"><div class="n">Marblism</div><p>Luuply ya aparece como socio en el sitio de Marblism. <a href="https://www.marblism.com/es/agencies" target="_blank" rel="noopener">Verlo →</a></p></div>
-    </div>
-    <div class="photo">
-      <figure data-r="2"><img src="assets/140.webp" alt="Frank Moreno en el escenario de ēmprende IA en Mérida"><figcaption>ēmprende IA, Mérida, noviembre 2026. Lleno total.</figcaption></figure>
-      <figure data-r="3"><img src="assets/lp/still-queue.webp" alt="Clientes haciendo fila en un negocio local"><figcaption>Luuply está donde el negocio conoce a su cliente.</figcaption></figure>
+      <figure class="office" data-r="4"><img src="assets/ppl/marblism-oficina.webp" alt="Equipo de Marblism trabajando en su oficina"><figcaption>El equipo de Marblism, en su oficina.</figcaption></figure>
     </div>
   </div>
 </section>
@@ -397,12 +448,26 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   </div>
 </section>
 
+<!-- TRATO EN TRES NÚMEROS -->
+<section id="trato" class="deal">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div class="eyebrow" data-r>La propuesta</div>
+    <h2 data-r>Así de sencillo, en tres números.</h2>
+    <div class="rows">
+      <div class="row" data-r="2"><div><b>Tú inviertes</b><p>Más la presencia de Zaaschila en nuestros eventos.</p></div><div class="n" data-count="45" data-pre="US$" data-suf=" mil">US$45 mil</div></div>
+      <div class="row" data-r="3"><div><b>Te quedas con</b><p>De Luuply, por medio de un SAFE: un contrato que se convierte en acciones.</p></div><div class="n v" data-count="2" data-suf="%">2%</div></div>
+      <div class="row" data-r="4"><div><b>Luuply vale hoy</b><p>Así, tu 2% valdría hoy US$200 mil.</p></div><div class="n" data-count="10" data-pre="US$" data-suf=" millones">US$10 millones</div></div>
+    </div>
+  </div>
+</section>
+
 <!-- ASK -->
 <section id="ask" class="ask">
   <div class="wrap">
-    <div class="eyebrow" data-r>Lo que necesitamos</div>
-    <div class="ask-big" data-r>US$45 mil<small>+ la presencia de Zaaschila y las marcas de tu grupo</small></div>
-    <div class="bar" aria-hidden="true"><i style="flex:5;background:var(--coral)"></i><i style="flex:40;background:var(--violet);animation-delay:.3s"></i></div>
+    <div class="eyebrow" data-r>A dónde van los US$45 mil</div>
+    <h2 data-r>Dos viajes y una meta.</h2>
+    <div class="bar" data-r aria-hidden="true"><i style="flex:5;background:var(--coral)"></i><i style="flex:40;background:var(--violet);animation-delay:.3s"></i></div>
     <div class="uses">
       <div class="use" data-r="2"><div class="n" style="color:var(--coral)">US$5 mil</div><h3>Monterrey, 3 al 7 de diciembre</h3><p>Vuelos y hotel para cerrar el acuerdo con el Tec de Monterrey.</p></div>
       <div class="use" data-r="3"><div class="n" style="color:var(--violet)">US$40 mil</div><h3>San Francisco</h3><p>Del 15 de enero al 15 de marzo. Dos meses de trabajo intenso para probar Luuply con clientes en Estados Unidos.</p></div>
@@ -416,6 +481,12 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   <div class="wrap">
     <div class="eyebrow" data-r>Qué recibes</div>
     <h2 data-r>Lo que ganas tú.</h2>
+    <div class="crowd">
+      <figure data-r="2"><img src="assets/ppl/merida-publico.webp" alt="Público en ēmprende IA Mérida"></figure>
+      <figure data-r="3"><img src="assets/ppl/evento-ceo.webp" alt="Conferencia de Marblism en Estados Unidos"></figure>
+      <figure data-r="4"><img src="assets/ppl/merida-expo.webp" alt="Asistentes recorriendo la expo de ēmprende IA"></figure>
+      <p data-r="2">Así se ven nuestros eventos. Aquí va a estar Zaaschila en 2027.</p>
+    </div>
     <div class="gets">
       <div class="get" data-r="2"><div class="k">Uno</div><h3>2% de Luuply</h3><p>Con un SAFE, el contrato que usan en Silicon Valley para los primeros inversionistas. Es tuyo por creer antes que nadie.</p></div>
       <div class="get" data-r="3"><div class="k">Dos</div><h3>4 veces más por ser el primero</h3><p>A esta valuación, US$45 mil equivalen a 0.45% de Luuply. A ti te damos 2%.</p></div>
@@ -480,8 +551,22 @@ footer{padding:28px 0;text-align:center;font-size:14px;color:var(--mute)}
   function f(n){if(n<1000)return 'US$'+n+' mil';var m=n/1000;return 'US$'+(n%1000?m.toFixed(1):m)+(m===1?' millón':' millones')}
   function u(){var v=+r.value;t.textContent='US$'+v+' millones';w.textContent=f(v*20);r.style.setProperty('--p',((v-10)/90*100)+'%')}
   r.addEventListener('input',u);u();
+
+  var prog=document.getElementById('prog');
+  function onScroll(){var h=document.documentElement;prog.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight||1))+')'}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+  function fmt(n,el){return (el.dataset.pre||'')+n+(el.dataset.suf||'')}
+  function countUp(el){var to=+el.dataset.count,t0=null,d=1100;if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    function step(t){if(!t0)t0=t;var p=Math.min((t-t0)/d,1),e=1-Math.pow(1-p,3);el.textContent=fmt(Math.round(to*e),el);if(p<1)requestAnimationFrame(step)}
+    el.textContent=fmt(0,el);requestAnimationFrame(step)}
+  var chs=document.querySelectorAll('.ch'),frames=document.querySelectorAll('.frame'),dots=document.querySelectorAll('.dots i');
+  function setK(k){chs.forEach(function(c){c.classList.toggle('on',c.dataset.k===k)});frames.forEach(function(f){f.classList.toggle('on',f.dataset.k===k)});dots.forEach(function(d,i){d.classList.toggle('on',String(i+1)===k)})}
   var els=document.querySelectorAll('[data-r]');
-  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+  if(!('IntersectionObserver' in window)){document.documentElement.classList.add('no-io');els.forEach(function(e){e.classList.add('in')});return}
+  var cio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);cio.unobserve(e.target)}})},{threshold:.6});
+  document.querySelectorAll('[data-count]').forEach(function(e){cio.observe(e)});
+  var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setK(e.target.dataset.k)})},{rootMargin:'-45% 0px -45% 0px'});
+  chs.forEach(function(c){sio.observe(c)});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
   els.forEach(function(e){io.observe(e)});
 })();
